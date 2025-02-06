@@ -21,12 +21,7 @@
 
             RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)        RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10) RC(2,11)
 
-            RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)        RC(3,6) RC(3,7) RC(3,8) RC(3,9) RC(3,10) RC(3,11)
-
-            
-
-            
-
+            RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)        NONE NONE NONE NONE NONE NONE 
             
         >;
     };
@@ -43,10 +38,23 @@
         wakeup-source;
 
         row-gpios
-            = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            ;
+            = <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Row 1
+            , <&gpio0 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Row 2
+            , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Row 3
+            , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  // Row 4
 
+        column-gpios
+            = <&gpio0 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Column 1
+            , <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Column 2
+            , <&gpio0 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Column 3
+            , <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Column 4
+            , <&gpio0 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Column 5
+            , <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Column 6
+            , <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Column 7
+            , <&gpio0 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Column 8
+            , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Column 9
+            , <&gpio0 23 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Column 10
+            , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Column 11
+            , <&gpio0 25 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  // Column 12
     };
 };
